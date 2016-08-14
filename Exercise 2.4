@@ -1,0 +1,20 @@
+public class PoundstoKilograms {
+
+	public static void main(String[] args) {
+	
+		
+		// Prompt the user to enter pounds
+		String PoundsString = JOptionPane.showInputDialog("Enter # Pounds to Convert to Kilograms");
+	
+		// Convert string to double
+		double pounds = Integer.parseInt(PoundsString);
+		
+		//Calculate Kilograms
+		Double kilograms = pounds * 0.454;
+				
+		//
+		String output =(pounds + " pounds" + " = " + kilograms + "kilograms");
+		JOptionPane.showMessageDialog(null,output);
+	}
+
+}
