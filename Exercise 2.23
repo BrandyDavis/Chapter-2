@@ -1,0 +1,46 @@
+import javax.swing.JOptionPane;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
+public class CostofDriving {
+
+	public static void main(String[] args) {
+	public final DecimalFormat df2 = new DecimalFormat(".##");
+	
+							
+						
+						// Prompt the user to enter SubTotal
+						String drivingdistanceString = JOptionPane.showInputDialog("Enter the driving distance");
+					
+						// Convert string to double
+						double distance = Double.parseDouble(drivingdistanceString);
+						
+						// Prompt the user to enter Miles per gallon
+						String milespergallongString = JOptionPane.showInputDialog("Enter miles per gallon");
+						
+						// Convert string to double
+						double miles = Double.parseDouble(milespergallongString);
+						
+					
+						// Prompt the user to enter price per gallon
+						String pricepergallongString = JOptionPane.showInputDialog("Enter price per gallon");
+						
+						// Convert string to double
+						double pricepergallon = Double.parseDouble(pricepergallongString);
+						
+						
+								
+						//Display the output
+						String output =("Cost of driving = " + "$" +  df2.format(distance / miles * pricepergallon));
+						JOptionPane.showMessageDialog(null,output);
+					
+
+				
+
+			}
+
+		}
+
+
+
+
