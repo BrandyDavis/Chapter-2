@@ -1,0 +1,37 @@
+import javax.swing.JOptionPane;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
+    public class TotalTipsCalculator {
+	
+	public static DecimalFormat df2 = new DecimalFormat(".##");
+
+	public static void main(String[] args) {
+					
+				
+				// Prompt the user to enter SubTotal
+				String subtotalString = JOptionPane.showInputDialog("Enter Subtotal");
+			
+				// Convert string to double
+				double subtotal = Double.parseDouble(subtotalString);
+				
+				// Prompt the user to enter Gratuity Rate
+				String gratuityrateString = JOptionPane.showInputDialog("Enter Gratuity Rate");
+				
+				// Convert string to double
+				double gratuityrate = Double.parseDouble(gratuityrateString);
+				
+			
+				double gratuity = subtotal * (gratuityrate / 100.0);
+				
+						
+				//Display the output
+				String output =("Total = " + "$" +  df2.format(subtotal + gratuity) + "  gratuity = " + "$" + df2.format(gratuity));
+				JOptionPane.showMessageDialog(null,output);
+			
+
+		
+
+	}
+
+}
