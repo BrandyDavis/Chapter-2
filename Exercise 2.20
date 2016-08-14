@@ -1,0 +1,31 @@
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
+   public class CalculateInterest {
+     public static DecimalFormat df2 = new DecimalFormat(".##");
+       
+     public static void main(String[] args) {
+		   //Calculate Interest
+		
+		   //Prompt user to enter balance
+		   String balanceString = JOptionPane.showInputDialog("Enter Balance");
+		
+		   // Convert string to double
+		   double balance = Double.parseDouble(balanceString);
+		
+		   //Prompt user to enter interest rate
+		   String interestString = JOptionPane.showInputDialog("Enter Interest");
+		
+		  //Convert String to Double
+		  double interest = Double.parseDouble(interestString);
+				
+		  //Calculate Next monthly payment interest
+				
+				
+		  String output =("Next Month interest is " + df2.format(balance * interest / 1200) + "%");
+		  JOptionPane.showMessageDialog(null,output);
+				
+
+	}
+
+}
